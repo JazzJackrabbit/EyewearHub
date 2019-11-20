@@ -2,7 +2,7 @@
 # platform :ios, '9.0'
 platform :osx, '10.13'
 
-target 'Smart Eyewear Hub' do
+target 'Eyewear Hub' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
