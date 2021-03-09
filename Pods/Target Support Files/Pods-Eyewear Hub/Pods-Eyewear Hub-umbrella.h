@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Smart_Eyewear_HubVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Smart_Eyewear_HubVersionString[];
+FOUNDATION_EXPORT double Pods_Eyewear_HubVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Eyewear_HubVersionString[];
 
