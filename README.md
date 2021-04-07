@@ -7,9 +7,12 @@ A MacOS utility that allows connecting to a J!NS MEME Academic device, reading r
 [Get latest version 📥 ]( https://github.com/JazzJackrabbit/EyewearHub/releases/download/albatros/Eyewear.Hub.zip )
 
 Output format is a string with comma-separated numeric values: 
-**AccX,AccY,AccZ,Roll,Pitch,Yaw,Right,Left**
+
+*AccX,AccY,AccZ,Roll,Pitch,Yaw,Right,Left*
+
 or
-**AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh**
+
+*AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh*
 
 ## Contribute
 
