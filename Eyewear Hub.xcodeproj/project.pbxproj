@@ -83,7 +83,7 @@
 		DE91229721184DAA006A568C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE91229A21184DAA006A568C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE91229C21184DAA006A568C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE91229D21184DAA006A568C /* MacOS_Demons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacOS_Demons.entitlements; sourceTree = "<group>"; };
+		DE91229D21184DAA006A568C /* Eyewear_Hub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Eyewear_Hub.entitlements; sourceTree = "<group>"; };
 		DE9122C0211852C2006A568C /* DeviceTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTabViewController.swift; sourceTree = "<group>"; };
 		DE9429D22361B7BD0052C4B8 /* BlinkDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkDetector.swift; sourceTree = "<group>"; };
 		DEA09056211DA75D00BA5B77 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C6BACD091D7F013400C884B9 /* MEMEAcademic */,
-				DE91229221184DA9006A568C /* MacOS-Demons */,
+				DE91229221184DA9006A568C /* Eyewear Hub */,
 				AA761CF11AFF9107002DD2AB /* Frameworks */,
 				AA7E996119FFBB7100949DDF /* Products */,
 				71CA6C1E07CEBACEF0A9C7B2 /* Pods */,
@@ -189,7 +189,7 @@
 			path = MEMEAcademic;
 			sourceTree = "<group>";
 		};
-		DE91229221184DA9006A568C /* MacOS-Demons */ = {
+		DE91229221184DA9006A568C /* Eyewear Hub */ = {
 			isa = PBXGroup;
 			children = (
 				DEA0905A211DAAEE00BA5B77 /* Shared */,
@@ -198,9 +198,9 @@
 				DE91229721184DAA006A568C /* Assets.xcassets */,
 				DE91229921184DAA006A568C /* Main.storyboard */,
 				DE91229C21184DAA006A568C /* Info.plist */,
-				DE91229D21184DAA006A568C /* MacOS_Demons.entitlements */,
+				DE91229D21184DAA006A568C /* Eyewear_Hub.entitlements */,
 			);
-			path = "MacOS-Demons";
+			path = "Eyewear Hub";
 			sourceTree = "<group>";
 		};
 		DEA0905A211DAAEE00BA5B77 /* Shared */ = {
@@ -299,7 +299,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AA7E995B19FFBB7100949DDF /* Build configuration list for PBXProject "GEIST-MEME-Demons" */;
+			buildConfigurationList = AA7E995B19FFBB7100949DDF /* Build configuration list for PBXProject "Eyewear Hub" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -395,9 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEF703D72125B59A001B73D8 /* SharedData.swift in Sources */,
 				DE9429D42361B7BD0052C4B8 /* BlinkDetector.swift in Sources */,
 				DEF703D82125B5A1001B73D8 /* RawDataViewController.swift in Sources */,
-				DEF703D72125B59A001B73D8 /* SharedData.swift in Sources */,
 				DEF703D52125B593001B73D8 /* GeistExtensions.swift in Sources */,
 				DEF703D62125B596001B73D8 /* GeistHelpers.swift in Sources */,
 				DEF703D42125B58D001B73D8 /* UDPWrapper.swift in Sources */,
@@ -486,7 +486,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -542,7 +542,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -569,7 +569,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillragozin.memedemons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -604,7 +604,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillragozin.memedemons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -627,7 +627,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "MacOS-Demons/MacOS_Demons.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Eyewear Hub/Eyewear_Hub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -635,7 +635,7 @@
 				DEVELOPMENT_TEAM = G2J9275BZY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "MacOS-Demons/Info.plist";
+				INFOPLIST_FILE = "Eyewear Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.1;
@@ -660,7 +660,7 @@
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = "MacOS-Demons/MacOS_Demons.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Eyewear Hub/Eyewear_Hub.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -668,7 +668,7 @@
 				DEVELOPMENT_TEAM = G2J9275BZY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "MacOS-Demons/Info.plist";
+				INFOPLIST_FILE = "Eyewear Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MARKETING_VERSION = 1.1;
@@ -682,7 +682,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA7E995B19FFBB7100949DDF /* Build configuration list for PBXProject "GEIST-MEME-Demons" */ = {
+		AA7E995B19FFBB7100949DDF /* Build configuration list for PBXProject "Eyewear Hub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA7E997819FFBB7100949DDF /* Debug */,

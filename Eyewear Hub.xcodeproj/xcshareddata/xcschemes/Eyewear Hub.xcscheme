@@ -17,7 +17,7 @@
                BlueprintIdentifier = "DE91229021184DA9006A568C"
                BuildableName = "Eyewear Hub.app"
                BlueprintName = "Eyewear Hub"
-               ReferencedContainer = "container:GEIST-MEME-Demons.xcodeproj">
+               ReferencedContainer = "container:Eyewear Hub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "DE91229021184DA9006A568C"
             BuildableName = "Eyewear Hub.app"
             BlueprintName = "Eyewear Hub"
-            ReferencedContainer = "container:GEIST-MEME-Demons.xcodeproj">
+            ReferencedContainer = "container:Eyewear Hub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "DE91229021184DA9006A568C"
             BuildableName = "Eyewear Hub.app"
             BlueprintName = "Eyewear Hub"
-            ReferencedContainer = "container:GEIST-MEME-Demons.xcodeproj">
+            ReferencedContainer = "container:Eyewear Hub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
