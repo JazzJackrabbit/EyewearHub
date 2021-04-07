@@ -8,7 +8,7 @@ A MacOS utility that allows connecting to a J!NS MEME Academic device, reading r
 
 Output format is a string with comma-separated numeric values: 
 
-*AccX, AccY, AccZ, Roll, Pitch, Yaw, Right, Left* (default) 
+*AccX, AccY, AccZ, Roll, Pitch, Yaw, Left, Right* (default) 
 
 *AccX, AccY, AccZ, Roll, Pitch, Yaw, **Vv**, **Vh*** (processed data)
 
