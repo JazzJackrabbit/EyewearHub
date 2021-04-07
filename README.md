@@ -13,7 +13,9 @@ Output format is a string with comma-separated numeric values:
 
 ## Contribute
 
-This project uses CocoaPods. Install external plugins before building the project.
+This project uses CocoaPods.
+Install external plugins before building the project.
+
 ```
 git clone git@github.com:JazzJackrabbit/EyewearHub.git
 cd EyewearHub
