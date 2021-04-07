@@ -1,16 +1,22 @@
-# Smart Eyewear Hub
+# Eyewear Hub
 
-This repository contains the MacOS utility that connects to a J!NS MEME Academic device, reads live data from it and streams it to localhost via UDP.
+A MacOS utility that allows connecting to a J!NS MEME Academic device, reading raw live data from it and streaming it via UDP.
 
-Any other application that relies on the data from J!NS MEME can be launched in parallel and read that data via UDP client. Current stream format is a string containing raw Integer numbers: **AccX,AccY,AccZ,Roll,Pitch,Yaw,Right,Left**
+# Download
 
-## Plugins
+[Get latest version 📥 ]( https://github.com/JazzJackrabbit/EyewearHub/releases/download/albatros/Eyewear.Hub.zip )
+
+Output format is a string with comma-separated numeric values: 
+**AccX,AccY,AccZ,Roll,Pitch,Yaw,Right,Left**
+or
+**AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh**
+
+## Contribute
 
 This project uses CocoaPods. Install external plugins before building the project.
 ```
+git clone git@github.com:JazzJackrabbit/EyewearHub.git
+cd EyewearHub
 pod install
+open Eyewear\ Hub.xcworkspace
 ```
-
-## Contact
-
-If you have any questions, please contact Kirill at ragozinkirill@gmail.com
