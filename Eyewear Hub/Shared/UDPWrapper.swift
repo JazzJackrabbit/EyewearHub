@@ -75,8 +75,6 @@ public class UDPWrapper: NSObject {
         var result = ""
         
         if (raw) {
-            //be careful when refactoring
-            //this exact data input format is used in our Jins-DDR app
             result.append(String(data.rawAccX))
             result.append(",")
             result.append(String(data.rawAccY))
@@ -116,8 +114,6 @@ public class UDPWrapper: NSObject {
         var result = ""
         
         if (raw) {
-            //be careful when refactoring
-            //this exact data input format is used in our Jins-DDR app
             result.append(String(data.rawAccX))
             result.append(",")
             result.append(String(data.rawAccY))
