@@ -48,6 +48,8 @@ class RawDataViewController: NSViewController {
         
         streamProcessedDataCheckbox.cell?.state = NSControl.StateValue.fromBool(sharedData.streamProcessed)
         
+        streamProcessedTriggered(self);
+        
         _ = Timer.scheduledTimer(timeInterval: updateFrequency,
                                  target: self,
                                  selector: #selector(self.ticker),

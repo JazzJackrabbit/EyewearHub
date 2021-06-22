@@ -21,7 +21,7 @@ public class SharedData: NSObject {
     
     public var udpClient : UDPWrapper
     
-    public var streamProcessed : Bool = false
+    public var streamProcessed : Bool = true
     public var includeBlink : Bool = false
     public var blinkDetected: Int = 0
     
