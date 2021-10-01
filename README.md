@@ -4,7 +4,7 @@ A MacOS utility that allows connecting to a J!NS MEME Academic device, reading r
 
 ### Download
 
-[Get latest version 📥 ]( https://github.com/JazzJackrabbit/EyewearHub/releases/download/boar/Eyewear.Hub.zip )
+[Get latest version 📥 ]( https://github.com/JazzJackrabbit/EyewearHub/releases )
 
 Output format is a string with comma-separated numeric values: 
 
