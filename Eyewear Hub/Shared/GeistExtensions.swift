@@ -16,7 +16,7 @@ public extension NSControl.StateValue {
 }
 
 public extension MEMEAcademicFullData {
-    func rawDataString(_ withBlink: Bool = false) -> String{
+    func rawDataString(_ withLabel: Bool = false, _ label: String = "") -> String{
         var result = ""
         
         result.append(String(self.rawAccX))
@@ -34,16 +34,15 @@ public extension MEMEAcademicFullData {
         result.append(String(self.rawLeft))
         result.append(",")
         result.append(String(self.rawRight))
-        if (withBlink == true){
+        if (withLabel == true){
             result.append(",")
-            result.append(String(0))
-//            result.append(String(self.vh))
+            result.append(label)
         }
         
         return result
     }
     
-    func processedDataString(_ withBlink: Bool = false) -> String{
+    func processedDataString(_ withLabel: Bool = false, _ label: String = "") -> String{
         
         var result = ""
         
@@ -62,10 +61,9 @@ public extension MEMEAcademicFullData {
         result.append(String(self.vv))
         result.append(",")
         result.append(String(self.vh))
-        if (withBlink == true){
+        if (withLabel == true){
             result.append(",")
-            result.append(String(0))
-//            result.append(String(self.vh))
+            result.append(label)
         }
         
         return result

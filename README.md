@@ -20,6 +20,7 @@ Install external plugins before building the project.
 ```
 git clone git@github.com:JazzJackrabbit/EyewearHub.git
 cd EyewearHub
+gem install cocoapods
 pod install
 open Eyewear\ Hub.xcworkspace
 ```

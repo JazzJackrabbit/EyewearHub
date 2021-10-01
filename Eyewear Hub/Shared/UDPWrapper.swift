@@ -152,4 +152,47 @@ public class UDPWrapper: NSObject {
         }
         return result
     }
+    
+    func wrapWithLabel(data: MEMEAcademicFullData, raw: Bool, label: String) -> String {
+        var result = ""
+        
+        if (raw) {
+            result.append(String(data.rawAccX))
+            result.append(",")
+            result.append(String(data.rawAccY))
+            result.append(",")
+            result.append(String(data.rawAccZ))
+            result.append(",")
+            result.append(String(data.rawRoll))
+            result.append(",")
+            result.append(String(data.rawPitch))
+            result.append(",")
+            result.append(String(data.rawYaw))
+            result.append(",")
+            result.append(String(data.rawLeft))
+            result.append(",")
+            result.append(String(data.rawRight))
+            result.append(",")
+            result.append(label)
+        } else {
+            result.append(String(data.accX))
+            result.append(",")
+            result.append(String(data.accY))
+            result.append(",")
+            result.append(String(data.accZ))
+            result.append(",")
+            result.append(String(data.roll))
+            result.append(",")
+            result.append(String(data.pitch))
+            result.append(",")
+            result.append(String(data.yaw))
+            result.append(",")
+            result.append(String(data.vv))
+            result.append(",")
+            result.append(String(data.vh))
+            result.append(",")
+            result.append(label)
+        }
+        return result
+    }
 }

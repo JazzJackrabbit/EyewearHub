@@ -23,6 +23,8 @@ public class SharedData: NSObject {
     
     public var streamProcessed : Bool = true
     public var includeBlink : Bool = false
+    public var label : String = ""
+    public var includeLabel : Bool = true
     public var blinkDetected: Int = 0
     
     override private init() {

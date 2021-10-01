@@ -37,6 +37,9 @@ class RawDataViewController: NSViewController {
     @IBOutlet weak var streamProcessedDataCheckbox: NSButton!
     @IBOutlet weak var includeBlinkCheckbox: NSButton!
     
+    @IBOutlet weak var labelValue: NSTextField!
+    @IBOutlet weak var includeLabelCheckbox: NSButton!
+    
     
     @objc var sharedData: SharedData {
         get { return SharedData.instance }
@@ -47,6 +50,8 @@ class RawDataViewController: NSViewController {
         // Do view setup here.
         
         streamProcessedDataCheckbox.cell?.state = NSControl.StateValue.fromBool(sharedData.streamProcessed)
+        includeLabelCheckbox.cell?.state = NSControl.StateValue.fromBool(sharedData.includeLabel)
+//        labelValue.cell?.title = String(sharedData.label)
         
         streamProcessedTriggered(self);
         
@@ -69,10 +74,10 @@ class RawDataViewController: NSViewController {
             yawField.cell?.title = String(sharedData.memeAcademicFullData.yaw)
             vvField.cell?.title = String(sharedData.memeAcademicFullData.vv)
             vhField.cell?.title = String(sharedData.memeAcademicFullData.vh)
-            blinkField.cell?.title = String(sharedData.blinkDetected)
+//            blinkField.cell?.title = String(sharedData.blinkDetected)
             
             if (SharedData.instance.udpClient.isOpened){
-                streamPreviewField.cell?.title = String(sharedData.memeAcademicFullData.processedDataString(SharedData.instance.includeBlink))
+                streamPreviewField.cell?.title = String(sharedData.memeAcademicFullData.processedDataString(SharedData.instance.includeLabel, SharedData.instance.label))
             } else {
                 streamPreviewField.cell?.title = "Not Available"
             }
@@ -86,10 +91,10 @@ class RawDataViewController: NSViewController {
             yawField.cell?.title = String(sharedData.memeAcademicFullData.rawYaw)
             vvField.cell?.title = String(sharedData.memeAcademicFullData.rawLeft)
             vhField.cell?.title = String(sharedData.memeAcademicFullData.rawRight)
-            blinkField.cell?.title = String(sharedData.blinkDetected)
+//            blinkField.cell?.title = String(sharedData.blinkDetected)
             
             if (SharedData.instance.udpClient.isOpened){
-                streamPreviewField.cell?.title = String(sharedData.memeAcademicFullData.rawDataString(SharedData.instance.includeBlink))
+                streamPreviewField.cell?.title = String(sharedData.memeAcademicFullData.rawDataString(SharedData.instance.includeLabel, SharedData.instance.label))
             } else {
                 streamPreviewField.cell?.title = "Not Available"
             }
@@ -102,31 +107,48 @@ class RawDataViewController: NSViewController {
             sharedData.streamProcessed = false
             leftLabel.cell?.title = "Left"
             rightLabel.cell?.title = "Right"
-            streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right"
+            streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right,(label)"
         } else {
             sharedData.streamProcessed = true
             leftLabel.cell?.title = "Vv"
             rightLabel.cell?.title = "Vh"
-            streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh"
+            streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh,(label)"
         }
     }
     
-    @IBAction func includeBlinkTriggered(_ sender: Any) {
-        if (includeBlinkCheckbox.cell?.state == NSControl.StateValue.off) {
-            sharedData.includeBlink = false
-             if (streamProcessedDataCheckbox.cell?.state == NSControl.StateValue.off) {
-                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right"
-             } else {
-                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh"
-            }
+//    @IBAction func includeBlinkTriggered(_ sender: Any) {
+//        if (includeBlinkCheckbox.cell?.state == NSControl.StateValue.off) {
+//            sharedData.includeBlink = false
+//             if (streamProcessedDataCheckbox.cell?.state == NSControl.StateValue.off) {
+//                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right"
+//             } else {
+//                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh"
+//            }
+//        } else {
+//           sharedData.includeBlink = true
+//             if (streamProcessedDataCheckbox.cell?.state == NSControl.StateValue.off) {
+//                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right,Blink"
+//             } else {
+//                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh,Blink"
+//            }
+//        }
+//    }
+    
+    @IBAction func includeLabelTriggered(_ sender: Any) {
+        if (includeLabelCheckbox.cell?.state == NSControl.StateValue.off) {
+            sharedData.includeLabel = false
         } else {
-           sharedData.includeBlink = true
-             if (streamProcessedDataCheckbox.cell?.state == NSControl.StateValue.off) {
-                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right,Blink"
-             } else {
-                streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh,Blink"
-            }
+            sharedData.includeLabel = true
+        }
+        
+        if (streamProcessedDataCheckbox.cell?.state == NSControl.StateValue.off) {
+            streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Left,Right,(label)"
+         } else {
+            streamFormatLabel.cell?.title = "AccX,AccY,AccZ,Roll,Pitch,Yaw,Vv,Vh,(label)"
         }
     }
     
+//    @IBAction func labelValueChanged(_ sender: NSTextField) {
+//        sharedData.label = labelValue.cell?.title ?? ""
+//    }
 }

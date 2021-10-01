@@ -97,6 +97,7 @@ class DeviceTabViewController: NSViewController, MEMEAcademicDeviceManagerDelega
     @IBOutlet weak var udpStopButton: NSButton!
     @IBOutlet weak var udpStartAutomaticallyCheckbox: NSButton!
     @IBOutlet weak var searchAutomaticallyCheckbox: NSButton!
+    @IBOutlet weak var udpLabelField: NSTextField!
     
     // CODE
     
@@ -358,6 +359,15 @@ class DeviceTabViewController: NSViewController, MEMEAcademicDeviceManagerDelega
             udpIPAddressField.cell?.title = String(udpClient.address)
             udpPortField.cell?.title = String(udpClient.port)
             udpIPAddressField.isEnabled = false
+            
+            
+            if (udpLabelField.cell?.title.count ?? 0 > 0) {
+                SharedData.instance.label = String(udpLabelField.cell?.title ?? "??")
+            } else {
+                SharedData.instance.label = String(deviceStatusLabel.cell?.title ?? "?")
+            }
+            udpLabelField.cell?.title = SharedData.instance.label
+            udpLabelField.isEnabled = false
             udpPortField.isEnabled = false
             udpStartButton.isEnabled = false
             udpStopButton.isEnabled = true
@@ -379,6 +389,7 @@ class DeviceTabViewController: NSViewController, MEMEAcademicDeviceManagerDelega
         
         udpIPAddressField.isEnabled = true
         udpPortField.isEnabled = true
+        udpLabelField.isEnabled = true
         udpStartButton.isEnabled = true
         udpStopButton.isEnabled = false
         udpStatusLabel.cell?.title = stateLabels.off.rawValue
@@ -435,14 +446,15 @@ class DeviceTabViewController: NSViewController, MEMEAcademicDeviceManagerDelega
         SharedData.instance.memeAcademicFullData = data
         
 //        detect blink
-        let blinkDetected = detectBlink(device, data: data)
-        SharedData.instance.blinkDetected = blinkDetected ? 1 : 0
+//        let blinkDetected = detectBlink(device, data: data)
+//        SharedData.instance.blinkDetected = blinkDetected ? 1 : 0
         
 //        send udp message
         var dataString: String = ""
+        
         if (udpClient.isOpened) {
-            if (SharedData.instance.includeBlink == true){
-                dataString = udpClient.wrapWithBlink(data: data, raw: !SharedData.instance.streamProcessed, blink: blinkDetected)
+            if (SharedData.instance.includeLabel == true){
+                dataString = udpClient.wrapWithLabel(data: data, raw: !SharedData.instance.streamProcessed, label: SharedData.instance.label)
             } else {
                 dataString = udpClient.wrap(data: data, raw: !SharedData.instance.streamProcessed)
             }
@@ -534,8 +546,8 @@ class DeviceTabViewController: NSViewController, MEMEAcademicDeviceManagerDelega
         formatter.dateFormat = "yyyy-MM-dd-hh-mm-ss"
         return (formatter.string(from: Date()) as NSString) as String
     }
-    
-//    func validateIpAddress(ipToValidate: String) -> Bool {
+
+    //    func validateIpAddress(ipToValidate: String) -> Bool {
 //
 //        var sin = sockaddr_in()
 //        var sin6 = sockaddr_in6()
