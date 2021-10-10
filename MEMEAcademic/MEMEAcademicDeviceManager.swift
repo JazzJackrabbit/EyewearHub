@@ -10,7 +10,7 @@ let kCustomService = "d6f25bd1-5b54-4360-96d8-7aa62e04c7ef"
 let kCustomChar1 = "d6f25bd2-5b54-4360-96d8-7aa62e04c7ef"
 let kCustomChar2 = "d6f25bd4-5b54-4360-96d8-7aa62e04c7ef"
 
-public protocol MEMEAcademicDeviceManagerDelegate: class {
+public protocol MEMEAcademicDeviceManagerDelegate: AnyObject {
     func memeDeviceFound(_ device: MEMEAcademicDevice!, withDeviceAddress address: String!)
     func memeDeviceConnected(_ device: MEMEAcademicDevice!)
     func memeDeviceDisconnected(_ device: MEMEAcademicDevice!)

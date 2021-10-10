@@ -31,7 +31,7 @@ let kAUPReportAcademia3: UInt8 = 0x9A
 
 let dataLength = 18
 
-public protocol MEMEAcademicDeviceDelegate: class {
+public protocol MEMEAcademicDeviceDelegate: AnyObject {
     func memeStandardDataReceived(_ device: MEMEAcademicDevice!, data: MEMEAcademicStandardData!)
     func memeFullDataReceived(_ device: MEMEAcademicDevice!, data: MEMEAcademicFullData!)
     func memeQuaternionReceived(_ device: MEMEAcademicDevice!, data: MEMEAcademicQuaternionData!)

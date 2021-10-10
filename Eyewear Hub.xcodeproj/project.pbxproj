@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C600DCCB1D8CA18B00205F9F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C600DCCA1D8CA18B00205F9F /* CoreBluetooth.framework */; };
 		C605C7391D8C13110064ED59 /* MEMEAcademicDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C605C7381D8C13110064ED59 /* MEMEAcademicDevice.swift */; };
 		C6BACD0B1D7F013400C884B9 /* MEMEAcademic.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BACD0A1D7F013400C884B9 /* MEMEAcademic.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6BACD191D7F017D00C884B9 /* MEMEAcademicQuaternionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BACD141D7F017D00C884B9 /* MEMEAcademicQuaternionData.swift */; };
@@ -15,7 +14,9 @@
 		C6BACD1B1D7F017D00C884B9 /* MEMEAcademicStandardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BACD161D7F017D00C884B9 /* MEMEAcademicStandardData.swift */; };
 		C6BACD1C1D7F017D00C884B9 /* MEMEAcademicDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BACD171D7F017D00C884B9 /* MEMEAcademicDeviceManager.swift */; };
 		C6BACD1D1D7F017D00C884B9 /* MEMEAcademicEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BACD181D7F017D00C884B9 /* MEMEAcademicEncryptor.swift */; };
-		C6EFADE01D8AAA8000636230 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EFADDF1D8AAA8000636230 /* IOBluetooth.framework */; };
+		DE4C099D2710488100F60F65 /* Pods_Eyewear_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD6E73D2B5B3DB8E4F6BA35 /* Pods_Eyewear_Hub.framework */; };
+		DE4C099F271048F800F60F65 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C600DCCA1D8CA18B00205F9F /* CoreBluetooth.framework */; };
+		DE4C09A2271048FA00F60F65 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6EFADDF1D8AAA8000636230 /* IOBluetooth.framework */; };
 		DE847A252126D34B00EFF6E1 /* MEMEAcademic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6BACD081D7F013400C884B9 /* MEMEAcademic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE91229421184DA9006A568C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE91229321184DA9006A568C /* AppDelegate.swift */; };
 		DE91229821184DAA006A568C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE91229721184DAA006A568C /* Assets.xcassets */; };
@@ -29,7 +30,6 @@
 		DEF703D62125B596001B73D8 /* GeistHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEF3B84212426850054280C /* GeistHelpers.swift */; };
 		DEF703D72125B59A001B73D8 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA09056211DA75D00BA5B77 /* SharedData.swift */; };
 		DEF703D82125B5A1001B73D8 /* RawDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA09058211DA87100BA5B77 /* RawDataViewController.swift */; };
-		E531831D81CF50BD96EAED84 /* Pods_Eyewear_Hub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD6E73D2B5B3DB8E4F6BA35 /* Pods_Eyewear_Hub.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C600DCCB1D8CA18B00205F9F /* CoreBluetooth.framework in Frameworks */,
-				C6EFADE01D8AAA8000636230 /* IOBluetooth.framework in Frameworks */,
+				DE4C099F271048F800F60F65 /* CoreBluetooth.framework in Frameworks */,
+				DE4C09A2271048FA00F60F65 /* IOBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE9122BD21184DF4006A568C /* MEMEAcademic.framework in Frameworks */,
-				E531831D81CF50BD96EAED84 /* Pods_Eyewear_Hub.framework in Frameworks */,
+				DE4C099D2710488100F60F65 /* Pods_Eyewear_Hub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,7 +481,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -537,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
@@ -555,7 +555,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G2J9275BZY;
@@ -568,8 +568,8 @@
 				INFOPLIST_FILE = MEMEAcademic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.2.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillragozin.eyewearhub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -591,7 +591,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = G2J9275BZY;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -603,8 +603,8 @@
 				INFOPLIST_FILE = MEMEAcademic/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				MARKETING_VERSION = 1.2.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillragozin.eyewearhub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -631,13 +631,14 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = G2J9275BZY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Eyewear Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.2.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -665,12 +666,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = G2J9275BZY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Eyewear Hub/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MARKETING_VERSION = 1.2.3;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kirillragozin.eyewearhub;
